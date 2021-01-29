@@ -13,7 +13,7 @@ To download the code repository for the first time:
 
 ```
 git clone https://github.com/swethako/active-campaign.git
-cd active-campaign-main/
+cd active-campaign/
 npm install
 ```
 
