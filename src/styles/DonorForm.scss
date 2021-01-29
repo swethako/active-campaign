@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+$donation-form-border-color: #80808047;
+$white: #fff;
+$slate-20: #f7f9ff;
+$black: #000;
+$mint: #19cca3;
+$mint-40: #b6f2e4;
+$ocean-40: #e3ebfc;
+$silver-color: #ccc;
+$ibm-plex-sans: "IBM Plex Sans", sans-serif;
+
+.donation-form {
+  text-align: center;
+
+  .donation-form-block {
+    margin: auto;
+    width: 46%;
+    height: 100%;
+    padding: 50px;
+    text-align: left;
+    background-color: $slate-20;
+
+    .tool-tip-block {
+      background-color: $ocean-40;
+      border-radius: 6px;
+      position: relative;
+      padding: 8px 12px 10px;
+      margin: 20px auto;
+      color: #3d91db;
+      font-family: $ibm-plex-sans;
+      font-size: 100%;
+
+      .total-amount {
+        font-family: $ibm-plex-sans;
+
+        .dollar_sign_sup {
+          font-size: small;
+        }
+
+        .total_amount_number {
+          font-weight: bold;
+        }
+      }
+
+      .total_amount_display_text {
+        font-weight: unset;
+      }
+    }
+
+    .tool-tip-block::after {
+      content: "";
+      position: absolute;
+      left: 80%;
+      margin-top: 31px;
+      border-width: 12px;
+      border-style: solid;
+      border-color: $ocean-40 transparent transparent transparent;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .tool-tip-block::after {
+        margin-top: 25px;
+        border-width: 15px;
+      }
+    }
+
+    progress {
+      width: 100%;
+      background: $mint-40;
+      border-radius: 10px 10px 0 0;
+    }
+
+    progress::-webkit-progress-value {
+      background: $mint;
+      border-radius: 10px 8px 0 0;
+    }
+
+    progress::-webkit-progress-bar {
+      background: $mint-40;
+      border-radius: 10px 10px 0 0;
+    }
+
+    @media only screen and (min-width: 771px) {
+      progress {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+
+    .donation-form-content {
+      border: 2px solid $donation-form-border-color;
+      padding: 20px;
+      border-radius: 0 0 5px 5px;
+      box-shadow: 1px 1px 1px $donation-form-border-color;
+      margin: auto;
+      margin-top: -2px;
+      background-color: $white;
+
+      .donation-form-heading {
+        font-family: "Poppins", sans-serif;
+        padding-left: 20px;
+        width: 87%;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .donation-form-heading {
+          font-size: 1em;
+        }
+      }
+
+      .number-of-people-block {
+        width: 84%;
+        text-align: left;
+        padding-left: 22px;
+        color: #9295a0;
+        font-family: $ibm-plex-sans;
+        font-size: 1.2em;
+
+        .number-of-people-count {
+          color: $black;
+        }
+      }
+
+      //Tablets
+      @media only screen and (max-width: 768px) {
+        .number-of-people-block {
+          width: 89%;
+          font-size: 1.1em;
+        }
+      }
+
+      .input_and_button_block {
+        padding: 20px;
+        position: relative;
+        margin-top: 20px;
+
+        input {
+          width: 66%;
+          padding: 13px 14px 15px 25px;
+          border: 1px solid $silver-color;
+          font-weight: 700;
+          font-style: normal;
+          font-size: x-large;
+          border-radius: 10px 0 0 10px;
+          font-family: $ibm-plex-sans;
+        }
+
+        @media only screen and (max-width: 768px) {
+          input {
+            width: 92%;
+            font-weight: 500;
+            padding: 10px 14px 10px 20px;
+            font-size: medium;
+            border-radius: 5px;
+          }
+        }
+
+        .dollar_sign {
+          width: 12px;
+          height: 19px;
+          position: absolute;
+          top: 41px;
+          left: 30px;
+        }
+
+        @media only screen and (max-width: 768px) {
+          .dollar_sign {
+            top: 35px;
+            width: 8px;
+            height: 13px;
+          }
+        }
+
+        button,
+        .button_enabled {
+          background-color: $mint;
+          border: none;
+          padding: 20px 16.5px 19px;
+          color: $white;
+          border-radius: 0 10px 10px 0;
+          font-weight: 700;
+          font-size: 1.2em;
+          cursor: pointer;
+          font-family: system-ui;
+        }
+
+        .button_disabled {
+          background-color: $mint;
+          border: none;
+          padding: 19px 16.5px 18px;
+          color: $white;
+          border-radius: 0 10px 10px 0;
+          font-family: $ibm-plex-sans;
+          font-weight: 700;
+          font-size: 100%;
+          font-size: 1.2em;
+          opacity: 0.5;
+          cursor: unset;
+        }
+
+        @media only screen and (max-width: 768px) {
+          button,
+          .button_enabled {
+            padding: 10px;
+            margin: 20px 0 0 60px;
+            border-radius: 10px;
+          }
+
+          .button_disabled {
+            padding: 10px;
+            opacity: 0.5;
+            border-radius: 10px;
+          }
+        }
+
+        @media only screen and (max-width: 600px) {
+          button,
+          .button_enabled {
+            margin: 20px 0 0 35px;
+          }
+
+          .button_disabled {
+            opacity: 0.5;
+          }
+        }
+
+        @media only screen and (min-width: 771px) {
+          button,
+          .button_enabled {
+            white-space: nowrap;
+            text-align: center;
+          }
+
+          .button_disabled {
+            opacity: 0.5;
+          }
+        }
+      }
+      @media only screen and (min-width: 375px) {
+        .input_and_button_block {
+          display: block;
+        }
+      }
+
+      @media only screen and (min-width: 771px) {
+        .input_and_button_block {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .success_and_failure_message {
+    .success_message,
+    .failure_message {
+      color: #0cab86;
+      text-align: center;
+      margin-top: 10px;
+      font-family: $ibm-plex-sans;
+      font-size: 1.2em;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .success_message,
+      .failure_message {
+        margin-top: 20px;
+      }
+    }
+
+    .failure_message {
+      color: #cc2119d4;
+    }
+  }
+
+  //Mobiles
+  @media only screen and (max-width: 600px) {
+    .donation-form-block {
+      width: unset;
+    }
+  }
+}
